@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&family=Inter:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-headline: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-surface: #0e0e13;
+  --color-surface-container: #19191f;
+  --color-surface-container-low: #131319;
+  --color-surface-container-high: #1f1f26;
+  --color-surface-container-highest: #25252d;
+  --color-surface-bright: #2c2b33;
+  --color-surface-dim: #0e0e13;
+  --color-surface-variant: #25252d;
+  
+  --color-on-surface: #f9f5fd;
+  --color-on-surface-variant: #acaab1;
+  
+  --color-primary: #ba9eff;
+  --color-primary-dim: #8455ef;
+  --color-on-primary: #39008c;
+  
+  --color-secondary: #53ddfc;
+  --color-secondary-dim: #40ceed;
+  --color-on-secondary: #004b58;
+  
+  --color-outline: #76747b;
+  --color-outline-variant: #48474d;
+
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+}
+
+@layer utilities {
+  .animate-marquee {
+    animation: marquee 30s linear infinite;
+  }
+}
+
+.light {
+  --color-surface: #f9f5fd;
+  --color-surface-container: #ede9f2;
+  --color-surface-container-low: #f3eff8;
+  --color-surface-container-high: #e7e3ec;
+  --color-surface-container-highest: #e1dde6;
+  --color-surface-bright: #ffffff;
+  --color-surface-dim: #f9f5fd;
+  --color-surface-variant: #e1dde6;
+  
+  --color-on-surface: #0e0e13;
+  --color-on-surface-variant: #48474d;
+  
+  --color-primary: #8455ef;
+  --color-primary-dim: #ba9eff;
+  --color-on-primary: #ffffff;
+  
+  --color-secondary: #004b58;
+  --color-secondary-dim: #53ddfc;
+  --color-on-secondary: #ffffff;
+  
+  --color-outline: #acaab1;
+  --color-outline-variant: #76747b;
+}
+
+@layer base {
+  * {
+    @apply transition-colors duration-300;
+  }
+  
+  body {
+    @apply bg-surface text-on-surface font-sans antialiased selection:bg-primary/30 selection:text-primary;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+  
+  input, textarea {
+    user-select: auto;
+  }
+}
+
+
+@layer components {
+  .grid-bg {
+    background-image: linear-gradient(to right, rgba(186, 158, 255, 0.04) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(186, 158, 255, 0.04) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  .glass-card {
+    @apply bg-surface-container-highest/60 backdrop-blur-xl border border-outline-variant/20 transition-all duration-300;
+  }
+
+  .glass-card:hover {
+    @apply border-primary/40 bg-surface-bright/80;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary;
+  }
+
+  .btn-primary {
+    @apply bg-gradient-to-r from-primary to-secondary text-on-primary font-headline font-bold px-6 py-2 rounded-sm hover:opacity-90 active:scale-95 transition-all;
+  }
+
+  .btn-ghost {
+    @apply border border-outline-variant/30 text-on-surface font-headline font-medium px-6 py-2 rounded-sm hover:border-outline-variant/100 hover:bg-primary/5 active:scale-95 transition-all;
+  }
+  
+  .btn-secondary {
+    @apply bg-surface-container-highest border border-secondary/30 text-secondary font-headline font-bold px-6 py-2 rounded-sm hover:bg-secondary/10 active:scale-95 transition-all;
+  }
+
+  /* Mobile App Optimizations */
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom, 20px);
+  }
+  
+  .pt-safe {
+    padding-top: env(safe-area-inset-top, 20px);
+  }
+
+  .scroll-touch {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+}
