@@ -24,12 +24,12 @@ export default function ParticipantDashboard() {
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-8 relative z-10">
           <div className="max-w-2xl">
             <p className="text-secondary font-headline font-bold text-xs uppercase tracking-[0.3em] mb-4">SYSTEM_STATUS: ACTIVE</p>
-            <h2 className="font-headline text-7xl font-bold tracking-tighter leading-[0.95] text-on-surface">
+            <h2 className="font-headline text-4xl sm:text-6xl md:text-7xl font-bold tracking-tighter leading-[0.95] text-on-surface">
               Welcome back, <br/>
               <span className="text-gradient">{user?.name?.split(' ')[0] || 'User'}!</span>
             </h2>
           </div>
-          <div className="bg-surface-container-highest/60 backdrop-blur-xl p-6 rounded-xl border border-outline-variant/10 flex items-center gap-6 min-w-[280px]">
+          <div className="bg-surface-container-highest/60 backdrop-blur-xl p-6 rounded-xl border border-outline-variant/10 flex items-center gap-6 w-full md:w-auto md:min-w-[280px]">
             <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center border border-primary/20">
               <Bolt className="text-primary" size={32} />
             </div>

@@ -36,7 +36,7 @@ export default function ProfilePage() {
           <div className="mb-12 flex justify-between items-end">
             <div>
               <p className="text-secondary font-headline text-sm tracking-[0.3em] uppercase mb-2">Identity Hub</p>
-              <h2 className="font-headline font-black text-6xl tracking-tighter text-on-surface">PROFILE_CORE</h2>
+              <h2 className="font-headline font-black text-4xl sm:text-6xl tracking-tighter text-on-surface">PROFILE_CORE</h2>
             </div>
             {!isEditing ? (
               <button 

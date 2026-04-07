@@ -213,7 +213,7 @@ export default function SettingsPage() {
         <div className="max-w-4xl mx-auto relative z-10">
           <div className="mb-12">
             <p className="text-secondary font-headline text-sm tracking-[0.3em] uppercase mb-2">Configuration Hub</p>
-            <h2 className="font-headline font-black text-6xl tracking-tighter text-on-surface">SETTINGS_CORE</h2>
+            <h2 className="font-headline font-black text-4xl sm:text-6xl tracking-tighter text-on-surface">SETTINGS_CORE</h2>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">

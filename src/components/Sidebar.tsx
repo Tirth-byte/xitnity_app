@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { LayoutDashboard, Calendar, Users, FileText, Handshake, Settings, LogOut, User, Globe, Menu } from 'lucide-react';
+import { LayoutDashboard, Calendar, Users, FileText, Handshake, Settings, LogOut, User, Globe, Menu, X } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import { cn } from '../lib/utils';
 
@@ -139,8 +139,8 @@ export default function Sidebar() {
               : "text-on-surface-variant hover:text-on-surface hover:bg-primary/5"
           )}
         >
-          <Menu size={20} className="mb-1" />
-          <span className="text-[8px] font-headline font-bold uppercase tracking-widest">More</span>
+          {mobileMenuOpen ? <X size={20} className="mb-1" /> : <Menu size={20} className="mb-1" />}
+          <span className="text-[8px] font-headline font-bold uppercase tracking-widest">{mobileMenuOpen ? 'Close' : 'More'}</span>
         </button>
       </nav>
 

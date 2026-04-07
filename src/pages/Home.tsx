@@ -93,7 +93,7 @@ export default function Home() {
             </span>
           </div>
           
-          <h1 className="font-headline font-bold text-4xl sm:text-5xl md:text-[5.5rem] leading-[1.1] md:leading-[1.05] tracking-tighter text-on-surface max-w-4xl">
+          <h1 className="font-headline font-bold text-3xl sm:text-5xl md:text-[5.5rem] leading-[1.1] md:leading-[1.05] tracking-tighter text-on-surface max-w-4xl">
             Build. Compete.<br/>
             <span className="text-gradient">Innovate with XINITY</span>
           </h1>

@@ -18,7 +18,7 @@ export default function Navbar({ title = "DASHBOARD / OVERVIEW", showSidebarTogg
       <div className="flex items-center gap-4 md:gap-6">
         <div className="flex items-center gap-2 md:gap-3 text-secondary font-headline uppercase text-[10px] md:text-xs tracking-widest">
           {showSidebarToggle && <Menu size={18} className="cursor-pointer md:hidden" />}
-          <span className="truncate max-w-[120px] md:max-w-none">{title}</span>
+          <span className="truncate max-w-[180px] md:max-w-none">{title}</span>
         </div>
         <div className="hidden md:block h-8 w-[1px] bg-outline-variant/20"></div>
         <div className="hidden md:flex items-center gap-8">

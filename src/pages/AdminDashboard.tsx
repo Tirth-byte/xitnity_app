@@ -182,8 +182,8 @@ export default function AdminDashboard() {
               View All Submissions
             </button>
           </div>
-          <div className="overflow-x-auto">
-            <table className="w-full text-left">
+          <div className="overflow-x-auto scroll-touch no-scrollbar">
+            <table className="w-full text-left min-w-[800px]">
               <thead>
                 <tr className="text-[10px] font-headline uppercase tracking-widest text-on-surface-variant/60 bg-surface-container-highest">
                   <th className="px-8 py-4">Project Name</th>

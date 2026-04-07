@@ -58,7 +58,7 @@ export default function EventDetail() {
             <div className="inline-block mb-4 px-3 py-1 bg-secondary/10 border border-secondary/20 rounded-sm">
               <span className="text-secondary font-headline text-xs uppercase tracking-widest font-bold">SYSTEM_INIT // 04</span>
             </div>
-            <h1 className="font-headline text-5xl md:text-7xl font-extrabold tracking-tighter mb-6 text-on-surface">
+            <h1 className="font-headline text-3xl sm:text-5xl md:text-7xl font-extrabold tracking-tighter mb-6 text-on-surface">
               {event.title.split(' ')[0]} <br/> 
               <span className="text-gradient">{event.title.split(' ').slice(1).join(' ')}</span>
             </h1>

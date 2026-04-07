@@ -71,10 +71,24 @@
     @apply transition-colors duration-300;
   }
   
+  html {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+
   body {
     @apply bg-surface text-on-surface font-sans antialiased selection:bg-primary/30 selection:text-primary;
     -webkit-tap-highlight-color: transparent;
     touch-action: manipulation;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+  }
+
+  #root {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
   }
   
   input, textarea {
